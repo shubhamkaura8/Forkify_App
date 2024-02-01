@@ -18,6 +18,8 @@ const controlRecipes = async function () {
     if (!id) return;
     recipeView.renderSpinner();
 
+    resultsView.update(modal.getSearchResultspage());
+
     // 1) Loading Recipe
     await modal.loadRecipe(id);
 
@@ -54,7 +56,7 @@ const controlServings = function (newServings) {
   //Update recipe servings
   modal.updateServings(newServings);
   //Update the recipe view
-  recipeView.render(modal.state.recipe);
+  recipeView.update(modal.state.recipe);
 };
 
 const init = function () {
