@@ -2,9 +2,10 @@
   "name": "forkify_app",
   "version": "1.0.0",
   "description": "Recipe Web app",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Shubham Kaura",
   "license": "ISC",
